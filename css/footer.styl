@@ -1,0 +1,46 @@
+footer
+    background qubertenDarkGrey
+    color #fff
+    padding 20px
+    font-size 16px
+
+.footer
+    &-wrapper
+        width 100%
+        display flex
+        justify-content space-between
+
+    &-column
+        display flex
+        flex-direction column
+        justify-content space-between
+
+    &-logo
+        color qubertenGold
+        text-decoration none
+        font-weight bold
+        letter-spacing 0.2px
+        margin-bottom 18px
+
+    &-logo
+    &-phone
+        font-size 20px
+
+    &-link
+        color #fff
+        text-decoration none
+
+@media (max-width: screenSm)
+    .footer
+        &-wrapper
+            display block
+            padding-left 20%
+
+        &-column
+            display block
+
+        &-block
+            margin 20px 0
+
+        &-logo
+            margin-top 0
