@@ -2,7 +2,12 @@
 
 ### Demo
 
-https://korosteleva.github.io/quberten/
+[Work In Progress]
+
+https://korosteleva.github.io/quberten/index.html
+https://korosteleva.github.io/quberten/services.html
+https://korosteleva.github.io/quberten/studio.html
+https://korosteleva.github.io/quberten/works.html
 
 ### Developing
 init project: `npm i`
