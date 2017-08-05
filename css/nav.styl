@@ -1,0 +1,27 @@
+nav
+    text-align center
+    margin 15px 0
+
+.nav
+    &-element
+        font-size 18px
+        color #000
+        transition color .3s
+        text-decoration none
+        text-transform uppercase
+        margin 0 15px
+        position relative
+        line-height 2
+
+        &:hover
+            color qubertenGold
+
+        &.active
+            &:after
+                content ''
+                position absolute
+                width 100%
+                height 4px
+                background qubertenGold
+                bottom -8px
+                left 0
