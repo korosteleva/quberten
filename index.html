@@ -10,16 +10,72 @@
     <link rel="stylesheet" href="static/css/font/acrobat-regular.css">
     <link rel="stylesheet" href="static/css/font/acrobat-bold.css">
     <link rel="stylesheet" href="static/css/font/acrobat-xbold.css">
-    <link rel="stylesheet" href="static/css/index.css">
+    <link rel="stylesheet" href="static/css/style.css">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <script type="text/javascript" src="http://mosinyaz.4each.ru/misc/jquery.js?v=1.4.4"></script>
+    <script type="text/javascript" src="http://mosinyaz.4each.ru/misc/jquery.once.js?v=1.2"></script>
 </head>
 <body>
 <div class="wrapper">
     <header></header>
 
     <div class="main">
+        <div class="swiper-container swiper-container-autoheight">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a class="swiper-slide-link" href="/content/karrera-i-manchini-o-kom-bolshe-pishut-v-italii"></a>
+                    <img class="swiper-slide-image" src="http://mosinyaz.4each.ru/sites/default/files/styles/work_preview/public/away-trio-1600x900_v1_0.jpg">
+
+                    <div class="container">
+                        <span class="swiper-slide-title">2015/16 Arsenal football club kit launch 1</span>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <a class="swiper-slide-link" href="/content/reyngold-schitaet-chto-spartak-porvyot-zenit-vy"></a>
+                    <img class="swiper-slide-image" src="http://mosinyaz.4each.ru/sites/default/files/styles/work_preview/public/apewztc.jpg">
+
+                    <div class="container">
+                        <span class="swiper-slide-title">2015/16 Arsenal football club kit launch 122</span>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <a class="swiper-slide-link" href="/content/karrera-i-manchini-o-kom-bolshe-pishut-v-italii"></a>
+                    <img class="swiper-slide-image" src="http://mosinyaz.4each.ru/sites/default/files/styles/work_preview/public/away-trio-1600x900_v1_0.jpg">
+
+                    <div class="container">
+                        <span class="swiper-slide-title">2015/16 Arsenal football club kit launch 1333</span>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <a class="swiper-slide-link" href="/content/reyngold-schitaet-chto-spartak-porvyot-zenit-vy"></a>
+                    <img class="swiper-slide-image" src="http://mosinyaz.4each.ru/sites/default/files/styles/work_preview/public/apewztc.jpg">
+
+                    <div class="container">
+                        <span class="swiper-slide-title">2015/16 Arsenal football club kit launch 14444</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container swiper-arrows">
+                <!-- Add Arrows -->
+                <div class="swiper-button-next">
+                    <div class="swiper-counter">
+                        <span class="swiper-counter-current"></span>/<span class="swiper-counter-all"></span>
+                    </div>
+                </div>
+                <div class="swiper-button-prev">
+                    <div class="swiper-counter">
+                        <span class="swiper-counter-current"></span>/<span class="swiper-counter-all"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="works container">
             <div class="quote">Студия спортивного дизайна Quberten. Мы<br>
                 делаем лучшую спортивную айдентику и<br>
@@ -120,5 +176,28 @@
         </div>
     </footer>
 </div>
+
+<script src="static/js/swiper.min.js"></script>
+<script>
+    (function($){
+        var counterAllNode = $('.swiper-counter-all');
+        var counterCurrentNode = $('.swiper-counter-current');
+
+        var slider = new Swiper('.swiper-container', {
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+            effect: 'fade',
+            loop: true,
+            onInit: function(event) {
+                counterCurrentNode.html(1);
+                counterAllNode.html(event.slides.length - 2);
+            }
+        });
+
+        slider.on('slideChangeEnd', function() {
+            counterCurrentNode.html(slider.realIndex + 1);
+        });
+    })(jQuery);
+</script>
 </body>
 </html>

@@ -1,0 +1,157 @@
+.swiper-container
+    width: 100%
+
+.swiper-slide
+    position relative
+
+    &-link
+        position absolute
+        top 0
+        left 0
+        right 0
+        bottom 0
+
+    &-image
+        width 100%
+        height auto
+
+    &-title
+        opacity 0
+        transition opacity .1s
+        width 255px
+        font-size 24px
+        line-height 32px
+        display inline-block
+        margin-top 30px
+
+    &.swiper-slide-active
+        .swiper-slide-title
+            opacity 1
+
+.swiper-container
+    margin 0 auto
+    position relative
+    overflow hidden
+    height auto
+    z-index 1
+
+.swiper-container-no-flexbox .swiper-slide
+    float left
+
+.swiper-container-vertical > .swiper-wrapper
+    flex-direction column
+
+.swiper-wrapper
+    position relative
+    width 100%
+    z-index 1
+    display flex
+    transition-property transform, height
+    box-sizing content-box
+    align-items flex-start
+
+.swiper-container-android .swiper-slide,
+.swiper-wrapper
+    transform translate3d(0px, 0, 0)
+
+.swiper-container-multirow > .swiper-wrapper
+    flex-wrap wrap
+
+.swiper-container-free-mode > .swiper-wrapper
+    transition-timing-function ease-out
+    margin 0 auto
+
+.swiper-slide
+    flex-shrink 0
+    width 100%
+    height auto
+    position relative
+
+/* a11y */
+.swiper-container .swiper-notification
+    position: absolute;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    opacity: 0;
+    z-index: -1000;
+
+/* IE10 Windows Phone 8 Fixes */
+.swiper-wp8-horizontal
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+
+.swiper-wp8-vertical
+    -ms-touch-action: pan-x;
+    touch-action: pan-x;
+
+/* Arrows */
+.swiper-arrows
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%)
+    width: 100%
+    z-index: 5
+
+.swiper-button-prev,
+.swiper-button-next
+    position: absolute
+    top 50%
+    width 20px
+    height 40px
+    padding 40px
+    z-index 10
+    cursor pointer
+    background-position center
+    background-repeat no-repeat
+    transform translateY(-100%)
+
+    &:hover
+        .swiper-counter
+            opacity 1
+
+.swiper-button-prev.swiper-button-disabled,
+.swiper-button-next.swiper-button-disabled
+    opacity: 0.35;
+    cursor: auto;
+
+.swiper-button-prev
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMyIgaGVpZ2h0PSI0MiIgdmlld0JveD0iMCAwIDIzIDQyIj4KICA8cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNGRkYiIHN0cm9rZS13aWR0aD0iMiIgZD0iTTIyIDFMMiAyMWwyMCAyMCIvPgo8L3N2Zz4=");
+    left: -20px;
+    right: auto;
+
+.swiper-button-next
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMyIgaGVpZ2h0PSI0MiIgdmlld0JveD0iMCAwIDIzIDQyIj4KICA8cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNGRkYiIHN0cm9rZS13aWR0aD0iMiIgZD0iTTEgMWwyMCAyMEwxIDQxIi8+Cjwvc3ZnPg==");
+    right: -20px;
+    left: auto;
+
+
+@media (max-width: screenSm)
+    .swiper-arrows
+        display none
+
+@media (max-width: screenLg)
+    .swiper-button-prev
+        left -10px
+
+    .swiper-button-next
+        right -10px
+
+.swiper-counter
+    color #ffffff
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    font-size 16px
+    line-height 19px
+    opacity 0
+    transition opacity .3s
+
+.swiper-button-prev
+    .swiper-counter
+        right 20px
+
+.swiper-button-next
+    .swiper-counter
+        left 20px

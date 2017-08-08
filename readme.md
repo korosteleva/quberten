@@ -12,6 +12,6 @@ https://korosteleva.github.io/quberten/works.html
 ### Developing
 init project: `npm i`
 
-watch styles: `stylus -c -w ./css/index.styl -o ./static/css/index.css -u autoprefixer-stylus`
+watch styles: `stylus -w ./css/index.styl -o ./static/css/style.css -u autoprefixer-stylus`
 
 watch js: `webpack --progress --colors --watch`
